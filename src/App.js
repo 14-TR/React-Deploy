@@ -2,15 +2,15 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { createRoot } from 'react-dom/client';
 import DeckGL from '@deck.gl/react';
 import { Map } from 'react-map-gl/maplibre';
-import { INITIAL_VIEW_STATE } from '../config/mapConfig';
+import { INITIAL_VIEW_STATE } from './config/mapConfig';
 import { CSVLoader } from '@loaders.gl/csv';
 import { load } from '@loaders.gl/core';  
-import ControlPanel from '../components/ControlPanel';
-import { createLayers } from '../utils/layerCreator'; 
-import { calculateStatistics } from '../utils/calculateStatistics';
-import StatisticsArea from '../components/StatisticsArea';
-import StackedBarChart from '../components/StackedBarChart';
-import { aggregateDataByDate } from '../utils/aggregateDataByDate';  
+import ControlPanel from './components/ControlPanel';
+import { createLayers } from './utils/layerCreator'; 
+import { calculateStatistics } from './utils/calculateStatistics';
+import StatisticsArea from './components/StatisticsArea';
+import StackedBarChart from './components/StackedBarChart';
+import { aggregateDataByDate } from './utils/aggregateDataByDate';  
 
 const BATTLES_DATA_URL = 'https://raw.githubusercontent.com/14-TR/data/main/acled_data_battles.csv';
 const EXPLOSIONS_DATA_URL = 'https://raw.githubusercontent.com/14-TR/data/main/acled_data_explosions.csv';
