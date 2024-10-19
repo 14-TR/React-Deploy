@@ -1,7 +1,7 @@
 {
   "name": "react-deploy",
   "version": "0.1.0",
-  "homepage": "https://14-tr.github.io/React-Deploy/Conflict-Monitor",
+  "homepage": "https://14-tr.github.io/React-Deploy/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
