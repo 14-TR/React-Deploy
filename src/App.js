@@ -11,6 +11,7 @@ import { calculateStatistics } from './utils/calculateStatistics';
 import StatisticsArea from './components/StatisticsArea';
 import StackedBarChart from './components/StackedBarChart';
 import { aggregateDataByDate } from './utils/aggregateDataByDate';  
+import SelectedDataCount from './components/SelectedDataCount';
 
 const BATTLES_DATA_URL = 'https://raw.githubusercontent.com/14-TR/data/main/acled_data_battles.csv';
 const EXPLOSIONS_DATA_URL = 'https://raw.githubusercontent.com/14-TR/data/main/acled_data_explosions.csv';
@@ -18,7 +19,7 @@ const EXPLOSIONS_DATA_URL = 'https://raw.githubusercontent.com/14-TR/data/main/a
 export default function App() {
   const [battlesData, setBattlesData] = useState([]);
   const [explosionsData, setExplosionsData] = useState([]);
-  const [selectedData, setSelectedData] = useState([]);  
+  const [selectedData, setSelectedData] = useState([]);  // State for selected data
   const [radius, setRadius] = useState(1000);
   const [upperPercentile, setUpperPercentile] = useState([0, 100]);
   const [coverage, setCoverage] = useState(1);
@@ -34,6 +35,7 @@ export default function App() {
   const [showChart, setShowChart] = useState(true);  
   const deckRef = useRef(null);
 
+  // Fetch data from URL and set it to state
   const fetchData = useCallback(async (url, setData) => {
     try {
       const result = await load(url, CSVLoader);
@@ -57,6 +59,7 @@ export default function App() {
     fetchData(EXPLOSIONS_DATA_URL, setExplosionsData);
   }, [fetchData]);
 
+  // Handle interaction on the map
   const handleInteraction = useCallback(async (x, y) => {
     if (deckRef.current) {
       const selectionRadius = brushingEnabled ? brushingRadius : 0;
@@ -82,7 +85,7 @@ export default function App() {
         }
       });
 
-      setSelectedData([...selectedBattles, ...selectedExplosions]);
+      setSelectedData([...selectedBattles, ...selectedExplosions]);  // Update selected data
       setBattlesStatistics(calculateStatistics(selectedBattles));
       setExplosionsStatistics(calculateStatistics(selectedExplosions));
       setAggregatedData(aggregateDataByDate(selectedBattles, selectedExplosions));
@@ -121,7 +124,7 @@ export default function App() {
       <DeckGL ref={deckRef} layers={layers} initialViewState={INITIAL_VIEW_STATE} controller={true}>
         <Map reuseMaps mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json" />
       </DeckGL>
-      
+
       {tooltip && tooltip.object && (
         <div
           style={{
@@ -186,6 +189,9 @@ export default function App() {
         showChart={showChart}
         setShowChart={setShowChart}
       />
+
+      {/* Display the count of selected data items in the bottom-right corner */}
+      <SelectedDataCount selectedData={selectedData} />
     </div>
   );
 }
