@@ -70,7 +70,7 @@ const StackedBarChart = ({ data }) => {
       .attr('width', x.bandwidth());
 
     const tickDates = parsedData
-      .filter((d, i) => i % 90 === 0) // Adjust this if needed for tick frequency
+      .filter((d, i) => i % 90 === 0) 
       .map(d => d.date);
 
     const xAxis = axisBottom(x)

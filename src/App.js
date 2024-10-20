@@ -88,7 +88,7 @@ export default function App() {
         }
       });
 
-      setSelectedData([...selectedBattles, ...selectedExplosions]);  // Update selected data
+      setSelectedData([...selectedBattles, ...selectedExplosions]); 
       setBattlesStatistics(calculateStatistics(selectedBattles));
       setExplosionsStatistics(calculateStatistics(selectedExplosions));
       setAggregatedData(aggregateDataByDate(selectedBattles, selectedExplosions));
@@ -154,7 +154,7 @@ export default function App() {
             position: 'absolute',
             bottom: '20px',
             right: '20px',
-            backgroundColor: '#2e2e2e',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
             padding: '10px',
             width: '33.33vw',
             height: '40vh',
