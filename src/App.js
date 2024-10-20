@@ -13,8 +13,11 @@ import StackedBarChart from './components/StackedBarChart';
 import { aggregateDataByDate } from './utils/aggregateDataByDate';  
 import SelectedDataCount from './components/SelectedDataCount';
 
+
 const BATTLES_DATA_URL = 'https://raw.githubusercontent.com/14-TR/data/main/acled_data_battles.csv';
 const EXPLOSIONS_DATA_URL = 'https://raw.githubusercontent.com/14-TR/data/main/acled_data_explosions.csv';
+// const VIIRS_DATA_URL = 'https://raw.githubusercontent.com/14-TR/data/main/viirs_2012-2020.csv';
+
 
 export default function App() {
   const [battlesData, setBattlesData] = useState([]);
