@@ -113,6 +113,7 @@ export default function App() {
     brushingRadius,
     showBattlesLayer,
     showExplosionsLayer,
+    handleInteraction,
   ]);
 
   return (
