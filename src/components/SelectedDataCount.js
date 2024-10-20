@@ -6,8 +6,8 @@ function SelectedDataCount({ selectedData }) {
       style={{
         position: 'absolute',
         bottom: '5px',
-        right: '20px',
-        backgroundColor: '#2e2e2e',
+        right: '10px',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
         padding: '3px',
         borderRadius: '3px',
         color: '#f5f5f5',

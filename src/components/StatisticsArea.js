@@ -7,7 +7,7 @@ const StatisticsArea = ({ battlesStatistics, explosionsStatistics }) => {
         position: 'absolute',
         top: '20px',
         right: '20px',
-        backgroundColor: '#1c1c1c',
+        backgroundColor: '#rgba(0, 0, 0, 0.7)',
         color: '#f5f5f5',
         display: 'flex',
         padding: '10px',

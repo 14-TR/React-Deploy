@@ -53,7 +53,7 @@ const ControlPanel = ({
         position: 'absolute',
         top: 20,
         left: 20,
-        backgroundColor: '#2e2e2e',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
         color: '#f5f5f5',
         padding: '10px',
         borderRadius: '8px',
