@@ -18,7 +18,7 @@ const EXPLOSIONS_DATA_URL = 'https://raw.githubusercontent.com/14-TR/data/main/a
 export default function App() {
   const [battlesData, setBattlesData] = useState([]);
   const [explosionsData, setExplosionsData] = useState([]);
-  const [selectedData, setSelectedData] = useState([]);  
+  // const [selectedData, setSelectedData] = useState([]);  
   const [radius, setRadius] = useState(1000);
   const [upperPercentile, setUpperPercentile] = useState([0, 100]);
   const [coverage, setCoverage] = useState(1);
