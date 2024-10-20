@@ -137,7 +137,7 @@ const ControlPanel = ({
       {/* Add ToggleSwitch for showing/hiding the chart */}
       <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #ddd' }}>
         <ToggleSwitch
-          label="Charting"
+          label="Analysis Chart"
           checked={showChart}
           onChange={(checked) => setShowChart(checked)}  // Toggle chart visibility
         />
