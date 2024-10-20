@@ -5,18 +5,18 @@ function SelectedDataCount({ selectedData }) {
     <div
       style={{
         position: 'absolute',
-        bottom: '20px',
+        bottom: '5px',
         right: '20px',
         backgroundColor: '#2e2e2e',
-        padding: '10px',
-        borderRadius: '8px',
+        padding: '3px',
+        borderRadius: '3px',
         color: '#f5f5f5',
         border: '1px solid #f5f5f5',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
       }}
     >
-      <h4>Selected Data</h4>
-      <p>{selectedData.length} items selected</p>
+      <h4>Event Count in Selected Items</h4>
+      <p>{selectedData.length}</p>
     </div>
   );
 }

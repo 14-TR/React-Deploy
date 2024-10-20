@@ -35,7 +35,7 @@ export default function App() {
   const [explosionsStatistics, setExplosionsStatistics] = useState({});
   const [tooltip, setTooltip] = useState(null);
   const [aggregatedData, setAggregatedData] = useState([]);  
-  const [showChart, setShowChart] = useState(true);  
+  const [showChart, setShowChart] = useState(false);  
   const deckRef = useRef(null);
 
   // Fetch data from URL and set it to state
