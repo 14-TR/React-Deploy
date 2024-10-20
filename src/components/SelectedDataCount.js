@@ -15,8 +15,8 @@ function SelectedDataCount({ selectedData }) {
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
       }}
     >
-      <h4>Event Count in Selected Items</h4>
-      <p>{selectedData.length}</p>
+      <h4>Selection Event Count:{selectedData.length}</h4>
+      <p></p>
     </div>
   );
 }
